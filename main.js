@@ -1,4 +1,4 @@
-console.warn(`
+console.log(`
    
 █▄─▄▄▀██▀▄─██─▄─▄─██▀▄─██▄─▄─▀█▄─██─▄█▄─▄▄▀█▄─▄▄─██▀▄─██▄─██─▄█
 ██─██─██─▀─████─████─▀─███─▄─▀██─██─███─▄─▄██─▄█▀██─▀─███─██─██
@@ -6,4 +6,7 @@ console.warn(`
   
 
                   Muito obrigado pela visita!
+                    Para mais informações
+                     envie um email para
+                   ox-fandom.0e@icloud.com
 `);

@@ -35,6 +35,17 @@ main {
   text-align: left;
 }
 
+main a {
+  font-weight: bold;
+  text-decoration: none; 
+  color: #E84A5F; 
+  transition: color 0.3s;
+}
+
+main a:hover {
+  color: #0056b3;
+}
+
 main h1 {
   font-size: 36px;
   margin-bottom: 20px;
@@ -52,7 +63,15 @@ section h2 {
 }
 
 section p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+section ul {
+  list-style: circle;
+}
+
+.lista-contato {
+  list-style: none;
 }
 
 section li {
