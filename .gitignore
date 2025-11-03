@@ -58,7 +58,3 @@ _preview/
 
 # Ignore hidden system files
 Icon
-
-# Ignore root-level artifacts that shouldn't be tracked (if present)
-main.css
-main.js
