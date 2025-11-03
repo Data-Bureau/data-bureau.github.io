@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Visualizador de Markdown — Data Bureau</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    .md-container{background:#fff;padding:24px;border-radius:8px}
+    pre{background:#0b2545;color:#fff;padding:12px;border-radius:6px;overflow:auto}
+  </style>
+  <!-- marked is a small, permissively licensed markdown parser suitable for client-side rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <a href="/">← Voltar</a>
+    <h1>Visualizador de Markdown</h1>
+    <p>Use o parâmetro <code>?file=</code> para abrir um arquivo Markdown dentro do repositório. Ex.: <code>viewer.html?file=guidelines/nature-guidelines.md</code></p>
+
+    <div id="output" class="md-container">Carregando...</div>
+  </main>
+
+  <script>
+    function getQueryParam(name){
+      var params = new URLSearchParams(location.search);
+      return params.get(name);
+    }
+    var file = getQueryParam('file');
+    var out = document.getElementById('output');
+    if(!file){
+      out.innerHTML = '<p>Parâmetro <code>file</code> ausente. Exemplos: <a href="viewer.html?file=guidelines/nature-guidelines.md">guidelines/nature-guidelines.md</a></p>';
+    } else {
+      // Basic sanitize: prevent fetching outside docs/
+      if(file.indexOf('..')!==-1){ out.innerText='Caminho inválido'; }
+      else {
+        var path = '/docs/' + file;
+        fetch(path).then(function(res){
+          if(!res.ok) throw new Error(res.statusText);
+          return res.text();
+        }).then(function(md){
+          // Render markdown to HTML
+          out.innerHTML = marked.parse(md);
+        }).catch(function(err){
+          out.innerText = 'Erro ao carregar: ' + err.message + '\nPath: ' + path;
+        });
+      }
+    }
+  </script>
+</body>
+</html>

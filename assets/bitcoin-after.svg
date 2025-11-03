@@ -1,0 +1,91 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blockGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f57c00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="txGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a73e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="700" height="500" fill="#ffffff"/>
+  
+  <text x="350" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0b2545" text-anchor="middle">Bitcoin: Peer-to-Peer Electronic Cash System</text>
+  <text x="350" y="58" font-family="Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">Satoshi Nakamoto, 2008</text>
+  
+  <!-- Transaction Pool -->
+  <rect x="40" y="100" width="180" height="100" rx="8" fill="#e3f2fd" stroke="#1a73e8" stroke-width="2"/>
+  <text x="130" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#0b2545" text-anchor="middle">Transaction Pool</text>
+  <rect x="60" y="140" width="140" height="25" rx="4" fill="url(#txGrad)" opacity="0.8"/>
+  <text x="130" y="157" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">TX: A → B (5 BTC)</text>
+  <rect x="60" y="170" width="140" height="25" rx="4" fill="url(#txGrad)" opacity="0.6"/>
+  <text x="130" y="187" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">TX: C → D (2 BTC)</text>
+  
+  <!-- Miner/Proof of Work -->
+  <rect x="260" y="100" width="180" height="100" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="350" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#0b2545" text-anchor="middle">Miner / Proof-of-Work</text>
+  <text x="350" y="150" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Find nonce where:</text>
+  <text x="350" y="170" font-family="Courier, monospace" font-size="11" fill="#0b2545" text-anchor="middle">SHA256(block) &lt; target</text>
+  <text x="350" y="190" font-family="Arial, sans-serif" font-size="11" fill="#ff6f00" font-weight="600" text-anchor="middle">⚡ Computational work</text>
+  
+  <!-- Blockchain -->
+  <g>
+    <text x="350" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#0b2545" text-anchor="middle">Blockchain (Distributed Ledger)</text>
+    
+    <!-- Block 1 -->
+    <rect x="80" y="260" width="120" height="90" rx="6" fill="url(#blockGrad)" opacity="0.9" stroke="#f57c00" stroke-width="2"/>
+    <text x="140" y="282" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">Block N-2</text>
+    <text x="140" y="300" font-family="Courier, monospace" font-size="9" fill="#fff" text-anchor="middle">Hash: 00ab3f...</text>
+    <text x="140" y="315" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Prev: 00de7c...</text>
+    <text x="140" y="330" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Nonce: 482551</text>
+    <text x="140" y="345" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">TXs: 245</text>
+    
+    <!-- Block 2 -->
+    <rect x="230" y="260" width="120" height="90" rx="6" fill="url(#blockGrad)" opacity="0.9" stroke="#f57c00" stroke-width="2"/>
+    <text x="290" y="282" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">Block N-1</text>
+    <text x="290" y="300" font-family="Courier, monospace" font-size="9" fill="#fff" text-anchor="middle">Hash: 00de7c...</text>
+    <text x="290" y="315" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Prev: 00ab3f...</text>
+    <text x="290" y="330" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Nonce: 392847</text>
+    <text x="290" y="345" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">TXs: 198</text>
+    
+    <!-- Block 3 (new) -->
+    <rect x="380" y="260" width="120" height="90" rx="6" fill="url(#blockGrad)" opacity="0.9" stroke="#f57c00" stroke-width="2"/>
+    <text x="440" y="282" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#fff" text-anchor="middle">Block N (new)</text>
+    <text x="440" y="300" font-family="Courier, monospace" font-size="9" fill="#fff" text-anchor="middle">Hash: 00f2a9...</text>
+    <text x="440" y="315" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Prev: 00de7c...</text>
+    <text x="440" y="330" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Nonce: 764923</text>
+    <text x="440" y="345" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">TXs: 312</text>
+    
+    <!-- Arrows connecting blocks -->
+    <line x1="200" y1="305" x2="230" y2="305" stroke="#ff9800" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="350" y1="305" x2="380" y2="305" stroke="#ff9800" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="500" y1="305" x2="540" y2="305" stroke="#ff9800" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="560" y="310" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="start">...</text>
+  </g>
+  
+  <!-- Network -->
+  <g>
+    <text x="350" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#0b2545" text-anchor="middle">Distributed Network</text>
+    <circle cx="250" cy="430" r="25" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+    <text x="250" y="436" font-family="Arial, sans-serif" font-size="10" fill="#0b2545" text-anchor="middle">Node</text>
+    <circle cx="350" cy="430" r="25" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+    <text x="350" y="436" font-family="Arial, sans-serif" font-size="10" fill="#0b2545" text-anchor="middle">Node</text>
+    <circle cx="450" cy="430" r="25" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+    <text x="450" y="436" font-family="Arial, sans-serif" font-size="10" fill="#0b2545" text-anchor="middle">Node</text>
+    <line x1="275" y1="430" x2="325" y2="430" stroke="#00897b" stroke-width="1.5"/>
+    <line x1="375" y1="430" x2="425" y2="430" stroke="#00897b" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Arrows from TX pool to Miner -->
+  <line x1="220" y1="150" x2="260" y2="150" stroke="#1a73e8" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Arrow from Miner to Blockchain -->
+  <line x1="350" y1="200" x2="350" y2="260" stroke="#ff9800" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff9800" />
+    </marker>
+  </defs>
+</svg>

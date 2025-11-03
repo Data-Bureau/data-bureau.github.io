@@ -1,0 +1,64 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Jekyll / build
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.jekyll-cache/
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# Environment
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Coverage
+coverage/
+
+# Misc
+.DS_Store
+desktop.ini
+
+# Local builds / temp
+dist/
+.tmp/
+
+# Ignore local generated site previews
+_preview/
+
+# Ignore hidden system files
+Icon
+
+# Ignore root-level artifacts that shouldn't be tracked (if present)
+main.css
+main.js

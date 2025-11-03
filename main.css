@@ -1,135 +1,70 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-  margin: 0;
-  padding: 5 5 5 5;
+:root{
+  --bg:#ffffff;
+  --ink:#0b2545;
+  --muted:#6b7a90;
+  --accent:#0f6fb2;
+  --accent-2:#0b2545;
+  --card:#f6f9ff;
+  --radius:8px;
 }
 
-/* Basic styling for the header */
-header {
-  background-image: linear-gradient(#E84A5F, rgb(255, 255, 255) 30%);
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.45;
 }
 
-nav ul {
-  list-style-type: none;
-}
+.container{max-width:1100px;margin:0 auto;padding:28px}
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-  
-}
+.site-header{border-bottom:1px solid #e6edf6}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo{width:160px;height:auto}
+.nav-actions{display:flex;gap:12px;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none}
+.nav-cta{background:transparent;border:1px solid var(--accent);padding:8px 12px;border-radius:6px;color:var(--accent)}
+.lang-toggle{background:transparent;border:1px solid #dfe9f6;padding:6px 8px;border-radius:6px}
 
-nav ul li a {
-  text-decoration: none;
-  color: #E84A5F;
-}
+.hero{display:flex;gap:28px;align-items:center;padding-top:40px;padding-bottom:40px}
+.hero-content{flex:1}
+.hero-figure{width:420px;flex:0 0 420px}
+.hero h1{font-size:34px;margin-bottom:12px}
+.lead{color:var(--muted);margin-bottom:18px}
+.cta-row{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.secondary{background:transparent;border:1px solid #dfe9f6;color:var(--accent-2)}
 
-/* Styling for the main content */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: left;
-}
+.problems h2,.how-it-works h2,.testimonials h2{margin-top:10px}
+.benefits{margin:12px 0 0 20px;color:var(--muted)}
 
-main a {
-  font-weight: bold;
-  text-decoration: none; 
-  color: #E84A5F; 
-  transition: color 0.3s;
-}
+.steps{list-style:decimal;margin-left:20px}
 
-main a:hover {
-  color: #0056b3;
-}
+.carousel{background:var(--card);padding:16px;border-radius:10px}
+.carousel blockquote{margin:0 0 8px 0;color:var(--muted)}
 
-main h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+.contact .meta-links{color:var(--muted)}
 
-main img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
+.site-footer{border-top:1px solid #e6edf6;padding:20px 28px;margin-top:40px}
+.footer-grid{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.copyright{display:block;margin-top:12px;color:var(--muted)}
 
-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+/* Cards for cases */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #e9f0fb;padding:18px;border-radius:10px}
+.card h3{margin:0 0 6px 0}
 
-section p {
-  margin-bottom: 10px;
-}
+.case-detail .before-after{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.frame{flex:1;background:#fff;border:1px solid #eef5fd;padding:10px;border-radius:8px;text-align:center}
+.frame img{max-width:100%;height:auto;border-radius:4px}
 
-section ul {
-  list-style: circle;
-}
+/* Accessibility helpers */
+.sr-only{position:absolute;left:-10000px}
 
-.lista-contato {
-  list-style: none;
-}
-
-section li {
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: both;
-}
-
-section li:nth-child(1) {
-  animation-delay: 0.25s;
-}
-
-section li:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-section li:nth-child(3) {
-  animation-delay: 0.75s;
-}
-
-section li:nth-child(4) {
-  animation-delay: 1s;
-}
-
-section li:nth-child(5) {
-  animation-delay: 1.25s;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    top: 100px;
- }
-  75% {
-    opacity: 0.5;
-    top: 0px;
- }
-  100% {
-    opacity: 1;
- }
-}
-
-.logo {
-  width: 200px;
-  margin: 0 auto;
-  display: flex;
-}
-
-.zap-icon{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:30px;
-  box-shadow: 1px 1px 2px #888;
-  z-index:1000;
+@media (max-width:860px){
+  .hero{flex-direction:column}
+  .hero-figure{width:100%;order:2}
 }

@@ -1,0 +1,11 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f5f5f5"/>
+  <text x="300" y="180" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">CRISPR/Cas9 Mechanism</text>
+  <text x="300" y="220" font-family="Arial, sans-serif" font-size="18" fill="#999" text-anchor="middle">(Before - Raw diagram)</text>
+  <rect x="150" y="250" width="80" height="60" fill="#ddd" stroke="#999"/>
+  <rect x="260" y="250" width="80" height="60" fill="#ddd" stroke="#999"/>
+  <rect x="370" y="250" width="80" height="60" fill="#ddd" stroke="#999"/>
+  <text x="190" y="285" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">DNA</text>
+  <text x="300" y="285" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Cas9</text>
+  <text x="410" y="285" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">gRNA</text>
+</svg>
